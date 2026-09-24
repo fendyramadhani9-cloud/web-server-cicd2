@@ -35,6 +35,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    if: ${{ secrets.SERVER_HOST != '' }}
 
     steps:
       - name: Checkout kode
