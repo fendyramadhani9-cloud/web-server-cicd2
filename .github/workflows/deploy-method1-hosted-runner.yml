@@ -28,14 +28,13 @@
 name: Deploy (Method 1 - GitHub-hosted Runner)
 
 on:
-  push:
-    branches: [ "main" ]
   workflow_dispatch: {}
+  # push:
+  #   branches: [ "main" ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    if: ${{ secrets.SERVER_HOST != '' }}
 
     steps:
       - name: Checkout kode
